@@ -13,7 +13,7 @@ class K0sctl < Formula
   end
 
   test do
-    assert_match "version: #{version}", shell_output "#{bin}/k0sctl", "version"
-    asset_match "address: 10.0.0.1", shell_output "#{bin}/k0sctl", "init", "root@10.0.0.1"
+    assert_match "version: #{version}", shell_output("#{bin}/k0sctl", "version")
+    asset_match "address: 10.0.0.1", shell_output("#{bin}/k0sctl", "init", "root@10.0.0.1")
   end
 end
