@@ -10,7 +10,8 @@ class K0sctl < Formula
   depends_on "go@1.17" => :build
 
   def install
-    system "make", "install", "PREFIX=#{prefix}"
+    system "make", "k0sctl"
+    prefix.install "k0sctl
     prefix.install_metafiles
   end
 
