@@ -1,15 +1,16 @@
 class K0sctl < Formula
-  desc "A bootstrapping and management tool for k0s kubernetes clusters"
+  desc "Bootstrapping and management tool for k0s kubernetes clusters"
   homepage "https://github.com/k0sproject/k0sctl"
   version "0.11.4"
   url "https://github.com/k0sproject/k0sctl.git", using: :git, tag: "v#{version}"
-  sha1 ""
+  sha256 ""
   license "Apache-2"
 
   depends_on "go@1.17" => :build
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
+    prefix.install_metafiles
   end
 
   test do
