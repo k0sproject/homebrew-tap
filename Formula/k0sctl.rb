@@ -11,12 +11,12 @@ class K0sctl < Formula
 
   def install
     system "make", "k0sctl"
-    prefix.install "k0sctl
+    bin.install "k0sctl"
     prefix.install_metafiles
   end
 
   test do
     assert_match "version: v#{version}", shell_output("#{bin}/k0sctl", "version")
-    asset_match "address: 10.0.0.1", shell_output("#{bin}/k0sctl", "init", "root@10.0.0.1")
+    assert_match "address: 10.0.0.1", shell_output("#{bin}/k0sctl", "init", "root@10.0.0.1")
   end
 end
