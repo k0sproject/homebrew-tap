@@ -10,7 +10,7 @@ class K0sctl < Formula
   depends_on "go@1.17" => :build
 
   def install
-    system "make", "k0sctl"
+    system "make", "k0sctl", "TAG_NAME=v#{version}"
     bin.install "k0sctl"
     prefix.install_metafiles
   end
