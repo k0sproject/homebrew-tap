@@ -2,16 +2,10 @@ class K0sctl < Formula
   desc "Bootstrapping and management tool for k0s kubernetes clusters"
   homepage "https://github.com/k0sproject/k0sctl"
   url "https://github.com/k0sproject/k0sctl.git",
-      tag:      "v0.12.2",
-      revision: "ab868a932d8faabfea5c431cf92c7ca1cf0c1fd1"
+      tag:      "v0.12.3",
+      revision: "bbd575cd94fd58de2d8fab83f06717a29612a8b8"
   license "Apache-2.0"
   head "https://github.com/k0sproject/k0sctl.git", branch: "main"
-
-  bottle do
-    root_url "https://github.com/k0sproject/homebrew-tap/releases/download/k0sctl-0.12.2"
-    sha256 cellar: :any_skip_relocation, big_sur:      "88adc699d746f9686441cd495bafdb7aa45cd417ee487ba7422c8fc14cbc330b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ac81db4c3b10d38f8dd5d0bef0e53538f6d8b1b84bf109b7cd1a54ef0f84d064"
-  end
 
   depends_on "go@1.17" => :build
 
@@ -19,6 +13,15 @@ class K0sctl < Formula
     system "make", "k0sctl", "TAG_NAME=v#{version}"
     bin.install "k0sctl"
     prefix.install_metafiles
+
+    output = Utils.safe_popen_read(bin/"k0sctl", "completion", "-s", "bash")
+    (bash_completion/"k0sctl").write output
+
+    output = Utils.safe_popen_read(bin/"k0sctl", "completion", "-s", "zsh")
+    (zsh_completion/"_k0sctl").write output
+
+    output = Utils.safe_popen_read(bin/"k0sctl", "completion", "-s", "fish")
+    (fish_completion/"k0sctl.fish").write output
   end
 
   test do
