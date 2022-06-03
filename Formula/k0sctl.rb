@@ -2,18 +2,12 @@ class K0sctl < Formula
   desc "Bootstrapping and management tool for k0s kubernetes clusters"
   homepage "https://github.com/k0sproject/k0sctl"
   url "https://github.com/k0sproject/k0sctl.git",
-      tag:      "v0.12.6",
-      revision: "d5f7d667cfcca95d6416720f81d6d166ff42df19"
+      tag:      "v0.13.0",
+      revision: "9e46423832d65976141ca5e95a92eb07aef5d288"
   license "Apache-2.0"
   head "https://github.com/k0sproject/k0sctl.git", branch: "main"
 
-  bottle do
-    root_url "https://github.com/k0sproject/homebrew-tap/releases/download/k0sctl-0.12.6"
-    sha256 cellar: :any_skip_relocation, big_sur:      "ca23e01e797067dbc656d93b68e0f0b8ebb02000df285c523fdfb39bde9dce20"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "681d6d0995ffc67fe697a066b85450de7dc9fff08d865df643d4141846efe208"
-  end
-
-  depends_on "go@1.17" => :build
+  depends_on "go@1.18" => :build
 
   def install
     system "make", "k0sctl", "TAG_NAME=v#{version}"
