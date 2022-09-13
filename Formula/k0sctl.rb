@@ -9,8 +9,9 @@ class K0sctl < Formula
 
   bottle do
     root_url "https://github.com/k0sproject/homebrew-tap/releases/download/k0sctl-0.14.0"
-    sha256 cellar: :any_skip_relocation, big_sur:      "d7b6fcaed0dca29312cc9c4a4cf782d2190e8a3e0eee4ed82545ef184f16ba62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e962e57606d199d012265439ae61c55e70e03253707e4c4361de647a1192f9ba"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur:      "f8eb0e2d627f6dc48e0e5bacc6afd18d3a71202c24c60286cd8162a117394a0f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7b3a6790cef4aa4107808a45bedf82716710248b286935e28e4b2aa782cc5d53"
   end
 
   depends_on "go" => :build
