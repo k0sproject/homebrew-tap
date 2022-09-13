@@ -13,7 +13,7 @@ class K0sctl < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "e962e57606d199d012265439ae61c55e70e03253707e4c4361de647a1192f9ba"
   end
 
-  depends_on "go@1.19" => :build
+  depends_on "go" => :build
 
   def install
     system "make", "k0sctl", "TAG_NAME=v#{version}"
