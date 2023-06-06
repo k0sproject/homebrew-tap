@@ -7,6 +7,12 @@ class K0sctl < Formula
   license "Apache-2.0"
   head "https://github.com/k0sproject/k0sctl.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/k0sproject/homebrew-tap/releases/download/k0sctl-0.15.2"
+    sha256 cellar: :any_skip_relocation, ventura:      "d0bbc908562ec69a36d92d70a072267c0a4cb5a02a8033882c766023e3aa7bdb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e76a75827838e35a7a15e17ad26d7d97dd390b1bcd32d75d9d4033fd92a77882"
+  end
+
   depends_on "go" => :build
 
   def install
