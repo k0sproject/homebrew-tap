@@ -9,6 +9,8 @@ class Bootloose < Formula
 
   bottle do
     root_url "https://github.com/k0sproject/homebrew-tap/releases/download/bootloose-0.7.1"
+    sha256 cellar: :any_skip_relocation, ventura:      "f0cd7b933366eb52423c5f95001a688014353b176e7626a8786626ff9607c2ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1a6bb3d91c40151c08360f28879e3e65afb22dac4e0d423a672298b354af7f1f"
   end
 
   depends_on "go" => :build
