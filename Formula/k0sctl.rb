@@ -22,7 +22,6 @@ class K0sctl < Formula
 
     generate_completions_from_executable(
       bin/"k0sctl", "completion",
-      ["bash", "zsh", "fish"],
       shell_parameter_format: :arg
     )
   end
