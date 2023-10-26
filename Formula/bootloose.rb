@@ -2,8 +2,8 @@ class Bootloose < Formula
   desc "Creates containers that look like virtual machines"
   homepage "https://github.com/k0sproject/bootloose"
   url "https://github.com/k0sproject/bootloose.git",
-      tag:      "v0.7.1",
-      revision: "709d49157a34833b8d2a72547fe7876d601307a1"
+      tag:      "v0.7.2",
+      revision: "bd4e26304abc6908bba1515295dbd42129b47c4d"
   license "Apache-2.0"
   head "https://github.com/k0sproject/bootloose.git", branch: "main"
 
