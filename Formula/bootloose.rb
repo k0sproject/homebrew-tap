@@ -8,8 +8,8 @@ class Bootloose < Formula
   head "https://github.com/k0sproject/bootloose.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/k0sproject/homebrew-tap/releases/download/bootloose-0.7.3"
-    sha256 cellar: :any_skip_relocation, ventura: "615c186ec3ce7cf01f337355df9cbf6cf6bc2100cd191f54c235fa07e3b80e78"
+    root_url "https://github.com/k0sproject/homebrew-tap/releases/download/bootloose-0.8.0"
+    sha256 cellar: :any_skip_relocation, ventura: "be3d022ef52c4978eff2fe8660894debac351fa29a9aed7383e472e8ed05386b"
   end
 
   depends_on "go" => :build
