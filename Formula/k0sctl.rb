@@ -2,8 +2,8 @@ class K0sctl < Formula
   desc "Bootstrapping and management tool for k0s kubernetes clusters"
   homepage "https://github.com/k0sproject/k0sctl"
   url "https://github.com/k0sproject/k0sctl.git",
-      tag:      "v0.21.0",
-      revision: "082a528e9a36a4a80819733ffee3881f7f06dd13"
+      tag:      "v0.22.0",
+      revision: "929602e5d57527e1bdf39d607555e3d031f2cf5e"
   license "Apache-2.0"
   head "https://github.com/k0sproject/k0sctl.git", branch: "main"
 
