@@ -25,7 +25,7 @@ class Bootloose < Formula
   end
 
   test do
-    version_output = shell_output(bin/"bootloose version 2>&1")
+    version_output = shell_output("#{bin}/bootloose version")
     assert_match "v#{version}", version_output
   end
 end
