@@ -28,9 +28,9 @@ class K0sctl < Formula
   end
 
   test do
-    version_output = shell_output(bin/"k0sctl version 2>&1")
+    version_output = shell_output("#{bin}/k0sctl version 2>&1")
     assert_match "version: v#{version}", version_output
-    init_output = shell_output(bin/"k0sctl init root@10.0.0.1 2>&1")
+    init_output = shell_output("#{bin}/k0sctl init root@10.0.0.1 2>&1")
     assert_match "address: 10.0.0.1", init_output
   end
 end
