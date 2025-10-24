@@ -8,9 +8,9 @@ class K0sctl < Formula
   head "https://github.com/k0sproject/k0sctl.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/k0sproject/homebrew-tap/releases/download/k0sctl-0.26.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4e1d3949eb1fd54c6dd2617d39e4a3588b1b83f3e7807e88c4f0e13439760261"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b2149f8e5dcf346024d6a6e2baa95fbbe4e5e5214d2c4dd259bd651dc50c6bf3"
+    root_url "https://github.com/k0sproject/homebrew-tap/releases/download/k0sctl-0.27.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6a2517cf6b1816cc8f68c8c7a25118fe42914362b5afea5fa0995cfd94ac762c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cdbdb4eb47a07e670d36eef9a0d6b9f2f33d7fabd17465806b68e44d7cbc646e"
   end
 
   depends_on "go" => :build
